@@ -1,3 +1,4 @@
+
 # Alphabot-2-Raspberry-Pi-Code
 
 This is a C++ program to manage an Alphabot 2 using a Raspberry Pi 4.
@@ -25,31 +26,28 @@ So here's the result of my experimentation. It's a program written in C++ that h
   (I couldn't get the debug version to work - something I'm missing there.)
 
 
-### You should be able to run the project now - there's quite a bit that the code does - so here's a breakdown: -
+### You should be able to run the project now - there's quite a bit that the code does - so here's a breakdown of current functionality: -
 
 
-## UML diagrams
+When the app starts - it should flash the coloured LED's at the bottom of the bot.
+Then - you can use the infrared remote that comes with the bot to drive it around a bit.
 
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
+Also - if you have managed to wire up the distance sensor - the bot will beep and ignore your "forward" commands if there is an obstacle detected in front of the bot.
 
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+Finally - if you put something close to the proximity sensor - then the bot will turn the camera towards the side where the sensor detects something (if both sides detect something - then the camera is returned to the middle position).
 
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
-```
+### Some notes about the code pattern
+So - the basic concept is that we have an "alphabot" class that does all the interacting with the hardware.
 
-And this will produce a flow chart:
+Then there are different services that monitor the different sensors like an infrared service that monitors the IR sensor and raises an event whenever it receives and IR signal.
 
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
-```
+All this hardware interface is controlled by a "behaviour" class.
+You can use this class to get events when the hardware picks up signals, and to decide how the bot should behave.
+
+If you look in the **main.cpp** file
+- you will see how the alphabot class is initialised,
+- and that all its events are captured and passed to any behaviors defined in that file.
+
+To start fiddling with the code - you can look at the **sample_test_behaviour.cpp** file.
+Here is all the code that drives the bot's behaviour described in the **breakdown of current functionalty**.
+
