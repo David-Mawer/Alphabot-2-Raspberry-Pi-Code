@@ -90,7 +90,7 @@ This **behaviour** is what makes the bot act as described in the **breakdown of 
 
 ---
 
-### **Note on many behaviours:**
+### **Note on more than one behaviour:**
 
 It's possible to have more than one **behaviour** class.
 One must think carefully to prevent the different **behaviour** classes from sending conflicting instructions to the **alphabot** class.
