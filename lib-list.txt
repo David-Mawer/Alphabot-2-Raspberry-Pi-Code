@@ -1,0 +1,18 @@
+This is the list of libs installed so far: -
+============================================
+
+1. ROS - instructions at http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi
+      dir: ~/libs/ros_catkin_ws
+      (requires python3-vcstool to do "Maintaining a Source Checkout")
+
+2. My Bluetooth P.O.C:
+      dir: ~/libs/bluetooth_server_lite
+      source: https://bitbucket.org/david_mawer/bluetooth_server_lite.git
+
+3. mjpg-streamer:
+      dir: ~/libs/mjpg-streamer
+      source: https://github.com/jacksonliam/mjpg-streamer.git
+
+4. rpi_ws281x:
+      dir: ~/libs/rpi_ws281x
+      source: https://github.com/jgarff/rpi_ws281x.git

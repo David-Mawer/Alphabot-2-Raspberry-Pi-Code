@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="DadBot-007" />
+		<Option makefile="makefile" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/DadBot-007" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Weffc++" />
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/DadBot-007" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-Weffc++" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Weffc++" />
+			<Add option="-Wall" />
+			<Add directory="/usr/local/include/opencv" />
+			<Add directory="/usr/local/include/opencv4" />
+		</Compiler>
+		<Linker>
+			<Add option="-lpigpio" />
+			<Add option="-lpthread" />
+			<Add option="-lrt" />
+			<Add option="-lopencv_videoio" />
+			<Add option="-lopencv_core" />
+			<Add option="-lopencv_imgproc" />
+			<Add option="-lopencv_ml" />
+			<Add option="-lopencv_video" />
+			<Add option="-lopencv_features2d" />
+			<Add option="-lopencv_stitching" />
+			<Add option="-lopencv_aruco" />
+			<Add option="-lopencv_bgsegm" />
+			<Add option="-lopencv_bioinspired" />
+			<Add option="-lopencv_calib3d" />
+			<Add option="-lopencv_ccalib" />
+			<Add option="-lopencv_datasets" />
+			<Add option="-lopencv_dpm" />
+			<Add option="-lopencv_face" />
+			<Add option="-lopencv_flann" />
+			<Add option="-lopencv_freetype" />
+			<Add option="-lopencv_fuzzy" />
+			<Add option="-lopencv_highgui" />
+			<Add option="-lopencv_imgcodecs" />
+			<Add option="-lopencv_line_descriptor" />
+			<Add option="-lopencv_objdetect" />
+			<Add option="-lbluetooth" />
+			<Add option="-pthread" />
+			<Add option="-lws2811" />
+			<Add directory="/usr/local/lib/" />
+		</Linker>
+		<Unit filename="include/LineReadResult.h" />
+		<Unit filename="include/alphabot.h" />
+		<Unit filename="include/appState.h" />
+		<Unit filename="include/behaviour_base.h" />
+		<Unit filename="include/bt_handler.h" />
+		<Unit filename="include/camera_servo_service.h" />
+		<Unit filename="include/distance_service.h" />
+		<Unit filename="include/enums.h" />
+		<Unit filename="include/ir_remote_service.h" />
+		<Unit filename="include/joystick_service.h" />
+		<Unit filename="include/led_service.h" />
+		<Unit filename="include/proximity_service.h" />
+		<Unit filename="include/sample_test_behaviour.h" />
+		<Unit filename="include/thread_helper.h" />
+		<Unit filename="include/tracking_service.h" />
+		<Unit filename="include/utils.h" />
+		<Unit filename="include/wheel_service.h" />
+		<Unit filename="main.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/LineReadResult.cpp" />
+		<Unit filename="src/alphabot.cpp" />
+		<Unit filename="src/appState.cpp" />
+		<Unit filename="src/bt_handler.cpp" />
+		<Unit filename="src/camera_servo_service.cpp" />
+		<Unit filename="src/distance_service.cpp" />
+		<Unit filename="src/ir_remote_service.cpp" />
+		<Unit filename="src/joystick_service.cpp" />
+		<Unit filename="src/led_service.cpp" />
+		<Unit filename="src/proximity_service.cpp" />
+		<Unit filename="src/sample_test_behaviour.cpp" />
+		<Unit filename="src/thread_helper.cpp" />
+		<Unit filename="src/tracking_service.cpp" />
+		<Unit filename="src/utils.cpp" />
+		<Unit filename="src/wheel_service.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

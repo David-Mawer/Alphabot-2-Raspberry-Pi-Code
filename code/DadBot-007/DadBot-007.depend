@@ -1,0 +1,442 @@
+# depslib dependency file v1.0
+1601902206 source:/home/pi/code/DadBot-007/main.cpp
+	<iostream>
+	<cstdlib>
+	<csignal>
+	<string>
+	<atomic>
+	<alphabot.h>
+	<appState.h>
+	<bt_handler.h>
+	<thread_helper.h>
+	<sample_test_behaviour.h>
+	<execinfo.h>
+	<unistd.h>
+
+1601902149 source:/home/pi/code/DadBot-007/src/bt_handler.cpp
+	<iostream>
+	"bt_handler.h"
+	<unistd.h>
+	<atomic>
+	<sys/socket.h>
+	<bluetooth/bluetooth.h>
+	<bluetooth/rfcomm.h>
+	<fcntl.h>
+	<poll.h>
+	<appState.h>
+
+1598142732 /home/pi/code/DadBot-007/include/bt_handler.h
+	<atomic>
+	<functional>
+
+1593974523 /home/pi/code/DadBot-007/include/alhpabot.h
+
+1593975970 source:/home/pi/code/DadBot-007/src/alhpabot.cpp
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+	<atomic>
+	"alhpabot.h"
+
+1601901979 /home/pi/code/DadBot-007/include/alphabot.h
+	<proximity_service.h>
+	<joystick_service.h>
+	<ir_remote_service.h>
+	<distance_service.h>
+	<wheel_service.h>
+	<camera_servo_service.h>
+	<tracking_service.h>
+	<led_service.h>
+	<LineReadResult.h>
+	<functional>
+	<mutex>
+	<atomic>
+	<thread_helper.h>
+	<appState.h>
+
+1601901948 source:/home/pi/code/DadBot-007/src/alphabot.cpp
+	<cmath>
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+	<alphabot.h>
+
+1601902257 source:/home/pi/code/DadBot-007/src/proximity_service.cpp
+	"proximity_service.h"
+	<pigpio.h>
+	<unistd.h>
+	<appState.h>
+
+1598169698 /home/pi/code/DadBot-007/include/proximity_service.h
+	<atomic>
+	<functional>
+	<vector>
+
+1598136822 source:/home/pi/code/DadBot-007/src/thread_helper.cpp
+	<thread>
+	<functional>
+	<list>
+	<iostream>
+	"thread_helper.h"
+
+1598136777 /home/pi/code/DadBot-007/include/thread_helper.h
+	<functional>
+	<list>
+	<thread>
+
+1595484945 source:/home/pi/code/DadBot-007/src/bt_sample_brain.cpp
+	"bt_sample_brain.h"
+	<string>
+	<iostream>
+	<atomic>
+
+1595485391 /home/pi/code/DadBot-007/include/bt_sample_brain.h
+	<alphabot.h>
+	<string>
+
+1595573202 /home/pi/code/DadBot-007/include/bt_sample_behaviour.h
+	<string>
+	<enums.h>
+
+1595525775 source:/home/pi/code/DadBot-007/src/bt_sample_behaviour.cpp
+	"bt_sample_behaviour.h"
+	<string>
+	<iostream>
+	<alphabot.h>
+	<atomic>
+
+1596654669 /home/pi/code/DadBot-007/include/enums.h
+
+1598142817 /home/pi/code/DadBot-007/include/joystick_service.h
+	<enums.h>
+	<atomic>
+	<functional>
+
+1601902396 source:/home/pi/code/DadBot-007/src/joystick_service.cpp
+	<iostream>
+	"joystick_service.h"
+	<pigpio.h>
+	<unistd.h>
+	<enums.h>
+	<appState.h>
+
+1601902588 source:/home/pi/code/DadBot-007/src/ir_remote_service.cpp
+	<iostream>
+	"ir_remote_service.h"
+	<string>
+	<pigpio.h>
+	<unistd.h>
+	<sys/time.h>
+	<utils.h>
+	<appState.h>
+
+1598142822 /home/pi/code/DadBot-007/include/ir_remote_service.h
+	<atomic>
+	<functional>
+
+1598148446 /home/pi/code/DadBot-007/include/distance_service.h
+	<atomic>
+	<functional>
+
+1598176575 /home/pi/code/DadBot-007/include/sample_test_behaviour.h
+	<string>
+	<enums.h>
+	<thread_helper.h>
+	<mutex>
+	<atomic>
+	<behaviour_base.h>
+
+1601902706 source:/home/pi/code/DadBot-007/src/sample_test_behaviour.cpp
+	"sample_test_behaviour.h"
+	<string>
+	<iostream>
+	<alphabot.h>
+	<unistd.h>
+	<atomic>
+	<enums.h>
+	<appState.h>
+	<LineReadResult.h>
+	<opencv2/opencv.hpp>
+	<opencv2/highgui.hpp>
+
+1598148489 source:/home/pi/code/DadBot-007/src/distance_service.cpp
+	"distance_service.h"
+	<iostream>
+	<unistd.h>
+	<pigpio.h>
+	<sys/time.h>
+	<utils.h>
+	<alphabot.h>
+
+1595751343 source:/home/pi/code/DadBot-007/src/utils.cpp
+	"utils.h"
+
+1595751582 /home/pi/code/DadBot-007/include/utils.h
+	<sys/time.h>
+
+1596607485 source:/home/david/myalphabot/code/DadBot-007/src/alphabot.cpp
+	<cmath>
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+	<alphabot.h>
+
+1596352733 /home/david/myalphabot/code/DadBot-007/include/alphabot.h
+	<proximity_service.h>
+	<joystick_service.h>
+	<ir_remote_service.h>
+	<distance_service.h>
+	<wheel_service.h>
+	<camera_servo_service.h>
+	<led_service.h>
+	<functional>
+	<mutex>
+	<atomic>
+	<thread_helper.h>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/thread_helper.h
+	<functional>
+	<list>
+	<thread>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/proximity_service.h
+	<atomic>
+	<functional>
+	<vector>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/joystick_service.h
+	<enums.h>
+	<atomic>
+	<functional>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/enums.h
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/ir_remote_service.h
+	<atomic>
+	<functional>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/distance_service.h
+	<atomic>
+	<functional>
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/bt_handler.cpp
+	<iostream>
+	"bt_handler.h"
+	<unistd.h>
+	<atomic>
+	<sys/socket.h>
+	<bluetooth/bluetooth.h>
+	<bluetooth/rfcomm.h>
+	<fcntl.h>
+	<poll.h>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/bt_handler.h
+	<atomic>
+	<functional>
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/distance_service.cpp
+	"distance_service.h"
+	<iostream>
+	<unistd.h>
+	<pigpio.h>
+	<sys/time.h>
+	<utils.h>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/utils.h
+	<sys/time.h>
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/ir_remote_service.cpp
+	<iostream>
+	"ir_remote_service.h"
+	<string>
+	<pigpio.h>
+	<unistd.h>
+	<sys/time.h>
+	<utils.h>
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/joystick_service.cpp
+	<iostream>
+	"joystick_service.h"
+	<pigpio.h>
+	<unistd.h>
+	<enums.h>
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/proximity_service.cpp
+	"proximity_service.h"
+	<pigpio.h>
+	<unistd.h>
+
+1596290238 source:/home/david/myalphabot/code/DadBot-007/src/sample_test_behaviour.cpp
+	"sample_test_behaviour.h"
+	<string>
+	<iostream>
+	<alphabot.h>
+	<atomic>
+
+1596040695 /home/david/myalphabot/code/DadBot-007/include/sample_test_behaviour.h
+	<string>
+	<enums.h>
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/thread_helper.cpp
+	<thread>
+	<functional>
+	<list>
+	<iostream>
+	"thread_helper.h"
+
+1596040695 source:/home/david/myalphabot/code/DadBot-007/src/utils.cpp
+	"utils.h"
+
+1596224150 source:/home/david/myalphabot/code/DadBot-007/main.cpp
+	<iostream>
+	<cstdlib>
+	<csignal>
+	<string>
+	<atomic>
+	<alphabot.h>
+	<bt_handler.h>
+	<thread_helper.h>
+	<sample_test_behaviour.h>
+
+1596285756 /home/david/myalphabot/code/DadBot-007/include/wheel_service.h
+	<mutex>
+	<atomic>
+	<enums.h>
+
+1596290133 /home/david/myalphabot/code/DadBot-007/include/camera_servo_service.h
+	<mutex>
+	<atomic>
+
+1596285829 source:/home/david/myalphabot/code/DadBot-007/src/wheel_service.cpp
+	<cmath>
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+	"wheel_service.h"
+
+1596290323 source:/home/david/myalphabot/code/DadBot-007/src/camera_servo_service.cpp
+	"camera_servo_service.h"
+	<cmath>
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+
+1598195642 /home/pi/code/DadBot-007/include/wheel_service.h
+	<mutex>
+	<atomic>
+	<enums.h>
+
+1599207135 /home/pi/code/DadBot-007/include/camera_servo_service.h
+	<mutex>
+	<atomic>
+
+1596653837 /home/pi/code/DadBot-007/include/led_service.h
+	<stdlib.h>
+	<mutex>
+	<../libinc/ws2811.h>
+
+1599207478 source:/home/pi/code/DadBot-007/src/camera_servo_service.cpp
+	"camera_servo_service.h"
+	<cmath>
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+
+1598642739 source:/home/pi/code/DadBot-007/src/wheel_service.cpp
+	<cmath>
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+	<string>
+	"wheel_service.h"
+
+1598137129 source:/home/pi/code/DadBot-007/src/led_service.cpp
+	"led_service.h"
+	<stdlib.h>
+	<cstdio>
+	<iostream>
+	<exception>
+
+1596648876 /home/david/myalphabot/code/DadBot-007/include/led_service.h
+	<stdlib.h>
+	<../libinc/ws2811.h>
+	<thread_helper.h>
+	<atomic>
+
+1596648478 source:/home/david/myalphabot/code/DadBot-007/src/led_service.cpp
+	"led_service.h"
+	<atomic>
+	<stdlib.h>
+	<cstdio>
+	<iostream>
+	<unistd.h>
+	<exception>
+
+1596222778 /usr/local/include/pigpio.h
+	<stdint.h>
+	<pthread.h>
+	<stdio.h>
+	<pigpio.h>
+	<stdio.h>
+	"pigpio.h"
+	<stdio.h>
+	<pigpio.h>
+	<stdio.h>
+	<pigpio.h>
+	<stdio.h>
+	<pigpio.h>
+
+1596352785 /home/david/myalphabot/code/DadBot-007/libinc/ws2811.h
+	"rpihw.h"
+	"pwm.h"
+
+1596379146 /home/david/myalphabot/code/DadBot-007/libinc/rpihw.h
+	<stdint.h>
+
+1596352785 /home/david/myalphabot/code/DadBot-007/libinc/pwm.h
+
+1596384047 /home/pi/code/DadBot-007/libinc/ws2811.h
+	"rpihw.h"
+	"pwm.h"
+
+1596384047 /home/pi/code/DadBot-007/libinc/rpihw.h
+	<stdint.h>
+
+1596384047 /home/pi/code/DadBot-007/libinc/pwm.h
+
+1596441199 /home/pi/code/DadBot-007/libinc/dma.h
+	<stdint.h>
+
+1598148743 source:/home/pi/code/DadBot-007/src/tracking_service.cpp
+	"tracking_service.h"
+	<iostream>
+	<pigpio.h>
+	<unistd.h>
+
+1598148533 /home/pi/code/DadBot-007/include/tracking_service.h
+	<atomic>
+	<functional>
+	<mutex>
+	<LineReadResult.h>
+
+1598146314 /home/pi/code/DadBot-007/include/LineReadResult.h
+
+1598145465 source:/home/pi/code/DadBot-007/src/LineReadResult.cpp
+	"LineReadResult.h"
+
+1598173941 /home/pi/code/DadBot-007/include/behaviour_base.h
+	<string>
+	<enums.h>
+	<thread_helper.h>
+
+1601901777 source:/home/pi/code/DadBot-007/src/appState.cpp
+	"appState.h"
+
+1601901720 /home/pi/code/DadBot-007/include/appState.h
+
