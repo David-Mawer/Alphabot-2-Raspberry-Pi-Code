@@ -5,13 +5,15 @@ This is a C++ program to manage an Alphabot 2 using a Raspberry Pi 4.
 
 few months ago I got an AlphaBot 2 (the one that comes with the Raspberry Pi 4).
 
-It was really cool learning how to work with the bot - most samples were written in Python (which is easy to get into).
+Some googling told me that it was a good idea to use C or C++ when writing code for the bot
+(especially if I know that performance is going to be an issue later on in my coding).
 
-Some googling told me that it was a good idea to use C or C++ (especially if I know that performance is going to be an issue later on in my coding).
+There were very few examples in C or C++ (most samples were written in Python).
 
-There were very few examples in C or C++, so I set about to make one.
+So I wrote a C++ program to run the AlphaBot 2.
 
-So here's the result of my experimentation. It's a program written in C++ that handles all the bits of hardware that makes up an AlphaBot 2.
+Here's the result of my experimentation...
+...It's a program written in C++ that handles all the bits of hardware that makes up an AlphaBot 2.
 
 ---
 
