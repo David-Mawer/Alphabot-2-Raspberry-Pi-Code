@@ -32,23 +32,29 @@ Here's the result of my experimentation...
 
 If it doesn't work - then you'll need to figure out which dependency hasn't been installed.
 
-Now - when the project runs - there are a few features that will work.
+Code::Blocks will show decent compile-time error messages; you can google these to figure out which libraries should be installed.
+
+I have assumed that you have the basic C++ toolset installed.
+
+So - when the project runs - then the rest of this README will make more sense to you.
 
 ---
 
 **Here's a breakdown of current functionality: -**
 
-When the app starts - it should flash the coloured LED's at the bottom of the bot.
+When the app starts - it should flash the coloured LED's at the bottom of the bot (for a short time).
 
-You can also use the infrared remote that comes with the bot to drive it around a bit.
+You can also be able to use the infrared remote that comes with the bot to drive it around a bit
+(be careful - the top middle button will turn off the bot).
 
-You may have managed to wire up the distance sensor
+Now - the distance sensor does not come with the Pi version of the bot.
+It's possible to buy this sensor seperately
 
-> This sensor is not supported by default for the Raspberry Pi version
-> of the bot - but it's possible to widen the gap between the top
+> Then, it's possible to widen the gap between the top
 > circuit board and the bottom circuit board of the bot.
 > 
-> Then you can use the distance sensor.
+> If you make the gap big enough - then you can 
+> plug in the distance sensor (and it works).
 
 If you've got the distance sensor installed - then the bot will beep and ignore your "forward" commands if there is an obstacle detected in front of the bot.
 
