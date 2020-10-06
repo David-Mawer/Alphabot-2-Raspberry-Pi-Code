@@ -10,7 +10,7 @@ Some googling told me that it was a good idea to use C or C++ when writing code 
 
 There were very few examples in C or C++ (most samples were written in Python).
 
-So I wrote a C++ program to run the AlphaBot 2.
+So I learnt C++ and wrote a program to run the AlphaBot 2.
 
 Here's the result of my experimentation...
 ...It's a program written in C++ that handles all the bits of hardware that makes up an AlphaBot 2.
