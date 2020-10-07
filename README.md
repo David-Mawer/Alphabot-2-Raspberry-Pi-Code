@@ -98,3 +98,10 @@ One must think carefully to prevent the different **behaviour** classes from sen
 > e.g. You can have one **behaviour** to flash the coloured LED's
 > and a different **behaviour** to drive the bot.
 > These two will not conflict with each other.
+
+
+---
+
+### Quick picture of how to add the Sonar to the Alphabot...
+
+![Image of DadBot-007](https://raw.githubusercontent.com/David-Mawer/Alphabot-2-Raspberry-Pi-Code/main/DadBot-007%20with%20Sonar.jpg)
