@@ -1,2 +1,2 @@
-Assumes taht we have the opencv library installed: -
+Assumes that we have the opencv library installed: -
 sudo apt install libopencv-dev
