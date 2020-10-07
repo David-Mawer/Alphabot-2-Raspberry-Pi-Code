@@ -60,10 +60,11 @@ It's possible to buy this sensor seperately
 > You can see the black pieces that make the space for the sonar to be installed.
 > 
 > ![Image of DadBot-007](https://raw.githubusercontent.com/David-Mawer/Alphabot-2-Raspberry-Pi-Code/main/DadBot-007%20with%20Sonar.jpg)
+> (the distance sonar is the blue piece that's got 2 cylindars attached to it)
 > 
 > If you're wandering what's happening at the back of the bot ... well - I added a battery holder so that I could power the bot with two 18650 batteries.
 >
-> This was necessary because the AlphaBot 2 comes with a battery holder that caonly handle 14500 batteries (these are shorter than the 18650 ones).
+> This was necessary because the AlphaBot 2 comes with a battery holder that can only handle 14500 batteries (these are shorter than the 18650 ones).
 > This was just something I did to improve the battery life.
 
 If you've got the distance sensor installed - then the bot will beep and ignore your "forward" commands if there is an obstacle detected in front of the bot.
