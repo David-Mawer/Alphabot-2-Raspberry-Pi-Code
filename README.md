@@ -55,10 +55,20 @@ It's possible to buy this sensor seperately
 > 
 > If you make the gap big enough - then you can 
 > plug in the distance sensor (and it works).
+> 
+> Here's a picture of the modified AlphaBot 2 (Pi)
+> You can see the black pieces that make the space for the sonar to be installed.
+> 
+> ![Image of DadBot-007](https://raw.githubusercontent.com/David-Mawer/Alphabot-2-Raspberry-Pi-Code/main/DadBot-007%20with%20Sonar.jpg)
+> 
+> If you're wandering what's happening at the back of the bot ... well - I added a battery holder so that I could power the bot with two 18650 batteries.
+>
+> This was necessary because the AlphaBot 2 comes with a battery holder that caonly handle 14500 batteries (these are shorter than the 18650 ones).
+> This was just something I did to improve the battery life.
 
 If you've got the distance sensor installed - then the bot will beep and ignore your "forward" commands if there is an obstacle detected in front of the bot.
 
-Finally - if you put something close to one of the the proximity sensors *(these are in front of the bot; a bit to the left, and a bit to the right of center)* - then the bot will turn the camera towards the side where the sensor detects something.
+Finally (in the list of features) - if you put something close to one of the the proximity sensors *(these are in front of the bot; a bit to the left, and a bit to the right of center)* - then the bot will turn the camera towards the side where the sensor detects something.
 
 If both sides detect something - then the camera is returned to the middle position.
 
@@ -98,10 +108,3 @@ One must think carefully to prevent the different **behaviour** classes from sen
 > e.g. You can have one **behaviour** to flash the coloured LED's
 > and a different **behaviour** to drive the bot.
 > These two will not conflict with each other.
-
-
----
-
-### Quick picture of how to add the Sonar to the Alphabot...
-
-![Image of DadBot-007](https://raw.githubusercontent.com/David-Mawer/Alphabot-2-Raspberry-Pi-Code/main/DadBot-007%20with%20Sonar.jpg)
