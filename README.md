@@ -109,3 +109,10 @@ One must think carefully to prevent the different **behaviour** classes from sen
 > e.g. You can have one **behaviour** to flash the coloured LED's
 > and a different **behaviour** to drive the bot.
 > These two will not conflict with each other.
+
+---
+
+### ToDo:
+
+1. Move camera processing logic into it's own service (see YouTube video for sample of processing frames: https://www.youtube.com/watch?reload=9&v=tpwokAPiqfs&t=11s)
+2. Consider adding line following to the default behavour (maybe use a button on the I.R. remote to start / stop the line follow logic).
