@@ -46,9 +46,9 @@ There's an example **sample_test_behaviour.cpp** class already in the project. T
 
 It's possible to have more than one **behaviour** class.
 
-You can see how to do this by looking for the **// load up the behaviours** comment in **main.cpp**. Then add an extra row for each behaviour that you created in the program.
+Each new Behaviour must extend the **behaviour_base** class the same way that the **sample_test_behaviour** class does.
 
-Your new Behaviour must extend the **behaviour_base** class the same way that the **sample_test_behaviour** class does.
+To use the new behaviour - look for the **// load up the behaviours** comment in **main.cpp**. Then add an extra row for each new behaviour that you want to activate.
 
 N.B. Think carefully to prevent the different **behaviour** classes from sending conflicting instructions to the **alphabot** class.
 
