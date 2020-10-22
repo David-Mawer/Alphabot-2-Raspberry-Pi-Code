@@ -10,39 +10,51 @@ There were very few examples to manage the bot in C or C++ (most samples were wr
 So I learnt C++ to write a program to run the AlphaBot 2.
 
 Here's the result of my experimentation...
+
 ...It's a program written in C++ that handles all the hardware components that make up an AlphaBot 2.
 
-The big win for me is to have one class where the bot can be controlled. This is explained in **Some notes about the code pattern** (below).
+The big win for me is to have one class where the bot can be controlled.
+
+This is explained below in the section **Some notes about the code pattern**.
 
 ---
 
 ### Some notes about the code pattern
 
-A very brief summary of the basic concept: -
+The idea behind the pattern is to have only one place where we need to write code in order to control the behaviour of the bot.
 
-We have an **"alphabot"** class that does all the interacting with the hardware.
-There are different services that monitor the different sensors 
+Here's a quick outline of the main classes in the program - and how they are linked together to achieve this.
+
+We have an **"alphabot"** class that is responsible for all the interacting with the hardware.
+
+This class creates a thread to run a service for each one of the different sensors.
+
+The service has a call-back (or an event) thast it uses to pass information on any events that it detects.
 
 > like an infrared service that monitors the IR sensor and raises an
 > event whenever it receives and IR signal
 
-The **alphabot** class manages all the services, and raises *events* when something significant has happened (a service reports an event).
+The idea was that the **alphabot** class would handle these *events*.
 
-These *events* are captured in **main.cpp**.
+It turns out that C++ frowns on events being handled by a method in an instance of a class.
 
-Here the *events* are passed to a **"behaviour"** class.
+For this reason - the service's *events* are captured together with any other **aplhabot** events in **main.cpp**.
 
-The idea is that we only have to write code in the **behaviour** class.
+This is where all *events* are forwarded to a **"behaviour"** class.
 
-The rest of the program is structured so that a **behaviour** can control the bot's actions - and it also has access to all the bot's sensors.
+
+
+So now we can write code in the **behaviour** class that controls the bot's movement, and responds to all the sensors.
+
+
 
 There's an example **sample_test_behaviour.cpp** class already in the project.
 
 This **behaviour** is what makes the bot act as described in the **breakdown of current functionality** section (below).
 
----
 
-### **Note on more than one behaviour:**
+
+**Note on more than one behaviour:**
 
 It's possible to have more than one **behaviour** class.
 One must think carefully to prevent the different **behaviour** classes from sending conflicting instructions to the **alphabot** class.
@@ -75,7 +87,7 @@ I have assumed that you have the basic C++ toolset installed.
 
 ---
 
-**Quick breakdown of current functionality: -**
+### Breakdown of current functionality: -
 
 When the app starts - it should flash the coloured LED's at the bottom of the bot (for a short time).
 
