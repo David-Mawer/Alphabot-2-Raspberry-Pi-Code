@@ -23,19 +23,18 @@ This is explained below in the section **Some notes about the code pattern**.
 
 The idea behind the pattern is to have only one place where we need to write code in order to control the behaviour of the bot.
 
-Here's a quick outline of the main classes in the program - and how they are linked together to achieve this.
+To achieve this - there's an **"alphabot"** class that is responsible for all the interacting with the hardware. This class creates a thread to run a service for each one of the different sensors.
 
-We have an **"alphabot"** class that is responsible for all the interacting with the hardware. This class creates a thread to run a service for each one of the different sensors.
+Each service has a call-back that it uses to pass information on any events that it detects.
 
-The service has a call-back (or an event) that it uses to pass information on any events that it detects.
+> So an infrared service that monitors the IR sensor will use the call-back (raise an
+> event) whenever it receives and IR signal.
 
-> like an infrared service that monitors the IR sensor and raises an
-> event whenever it receives and IR signal
+The services' *events* are captured together with any other **aplhabot** events in **main.cpp**.
 
-The idea was that the **alphabot** class would handle these *events*.
-It turns out that C++ frowns on events being handled by a method in an instance of a class.
-For this reason - the service's *events* are captured together with any other **aplhabot** events in **main.cpp**.
-This is where all *events* are forwarded to a **"behaviour"** class.
+(Initially - I wanted all the events to be handled by the **alphabot** class - but this is frowned on by C++)
+
+So now - we have all the events captured in **main.cpp**. This is where the *events* are forwarded to a **"behaviour"** class.
 
 So now we can write code in the **behaviour** class that controls the bot's movement, and responds to all the sensors.
 
@@ -44,7 +43,12 @@ There's an example **sample_test_behaviour.cpp** class already in the project. T
 **Note on more than one behaviour:**
 
 It's possible to have more than one **behaviour** class.
-One must think carefully to prevent the different **behaviour** classes from sending conflicting instructions to the **alphabot** class.
+
+You can see how to do this by looking for the **// load up the behaviours** comment in **main.cpp**. Add an extra row for each behaviour that you want to add to the program.
+
+Your new Behaviour must extend the **behaviour_base** class the same way that the **sample_test_behaviour** class does.
+
+N.B. Think carefully to prevent the different **behaviour** classes from sending conflicting instructions to the **alphabot** class.
 
 > e.g. You can have one **behaviour** to flash the coloured LED's
 > and a different **behaviour** to drive the bot.
