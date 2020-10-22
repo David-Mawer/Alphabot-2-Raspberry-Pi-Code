@@ -25,34 +25,21 @@ The idea behind the pattern is to have only one place where we need to write cod
 
 Here's a quick outline of the main classes in the program - and how they are linked together to achieve this.
 
-We have an **"alphabot"** class that is responsible for all the interacting with the hardware.
+We have an **"alphabot"** class that is responsible for all the interacting with the hardware. This class creates a thread to run a service for each one of the different sensors.
 
-This class creates a thread to run a service for each one of the different sensors.
-
-The service has a call-back (or an event) thast it uses to pass information on any events that it detects.
+The service has a call-back (or an event) that it uses to pass information on any events that it detects.
 
 > like an infrared service that monitors the IR sensor and raises an
 > event whenever it receives and IR signal
 
 The idea was that the **alphabot** class would handle these *events*.
-
 It turns out that C++ frowns on events being handled by a method in an instance of a class.
-
 For this reason - the service's *events* are captured together with any other **aplhabot** events in **main.cpp**.
-
 This is where all *events* are forwarded to a **"behaviour"** class.
-
-
 
 So now we can write code in the **behaviour** class that controls the bot's movement, and responds to all the sensors.
 
-
-
-There's an example **sample_test_behaviour.cpp** class already in the project.
-
-This **behaviour** is what makes the bot act as described in the **breakdown of current functionality** section (below).
-
-
+There's an example **sample_test_behaviour.cpp** class already in the project. This makes the bot act as described in the **breakdown of current functionality** section (below).
 
 **Note on more than one behaviour:**
 
