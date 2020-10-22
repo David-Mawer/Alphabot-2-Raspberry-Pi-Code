@@ -12,7 +12,7 @@ So I learnt C++ to write a program to run the AlphaBot 2.
 Here's the result of my experimentation...
 ...It's a program written in C++ that handles all the hardware components that make up an AlphaBot 2.
 
-The big win for me is to have one class where the bot can be controlled. This is explained in "Some notes about the code pattern".
+The big win for me is to have one class where the bot can be controlled. This is explained in **Some notes about the code pattern** (below).
 
 ---
 
@@ -38,7 +38,7 @@ The rest of the program is structured so that a **behaviour** can control the bo
 
 There's an example **sample_test_behaviour.cpp** class already in the project.
 
-This **behaviour** is what makes the bot act as described in the **breakdown of current functionality** section (above).
+This **behaviour** is what makes the bot act as described in the **breakdown of current functionality** section (below).
 
 ---
 
@@ -53,12 +53,40 @@ One must think carefully to prevent the different **behaviour** classes from sen
 
 ---
 
-**Here's a breakdown of current functionality: -**
+### Installing the code and getting it running
+  **This bit's important - don't skip it!**
+
+1. clone the master branch into it's own folder on the bot's Raspberry Pi.
+
+2. Install libopencv-dev using the command   **sudo apt install libopencv-dev**
+  
+3. copy the external libs to your local lib folder by running   **./code/DadBot-007/copy-lib-local.sh**
+
+4. load up the project file in **code/DadBot-007/DadBot-007.cbp** using Code::Blocks - and build the **Release** version.   (I couldn't get the debug version to work - something I'm missing there.)
+
+
+**The code should work now.**
+
+If it doesn't work - then you'll need to figure out which dependency hasn't been installed.
+
+Code::Blocks will show decent compile-time error messages; you can google these to figure out which libraries should be installed.
+
+I have assumed that you have the basic C++ toolset installed.
+
+---
+
+**Quick breakdown of current functionality: -**
 
 When the app starts - it should flash the coloured LED's at the bottom of the bot (for a short time).
 
 You can also be able to use the infrared remote that comes with the bot to drive it around a bit
 (be careful - the top middle button will turn off the bot).
+
+If you put something close to one of the proximity sensors *(these are in front of the bot; a bit to the left, and a bit to the right of centre)* - then the bot will turn the camera towards the side where the sensor detects something.
+
+If both sides detect something - then the camera is returned to the middle position.
+
+Finally - if you've got the distance sensor installed - The bot will beep and ignore your "forward" commands if there is an obstacle detected too close to the front of the bot.
 
 Now - the distance sensor does not come with the Pi version of the bot.
 It's possible to buy this sensor separately
@@ -79,36 +107,6 @@ It's possible to buy this sensor separately
 >
 > This was necessary because the AlphaBot 2 comes with a battery holder that can only handle 14500 batteries (these are shorter than the 18650 ones).
 > This was just something I did to improve the battery life.
-
-If you've got the distance sensor installed - then the bot will beep and ignore your "forward" commands if there is an obstacle detected in front of the bot.
-
-Finally (in the list of features) - if you put something close to one of the proximity sensors *(these are in front of the bot; a bit to the left, and a bit to the right of centre)* - then the bot will turn the camera towards the side where the sensor detects something.
-
-If both sides detect something - then the camera is returned to the middle position.
-
----
-
-### Instructions to get the code compiled
-  **This bit's important - don't skip it!**
-
-1. Install libopencv-dev using the command   **sudo apt install libopencv-dev**
-  
-2. copy the external libs to your local lib folder by running   **./code/DadBot-007/copy-lib-local.sh**
-
-3. load up the project file in **code/DadBot-007/DadBot-007.cbp** using Code::Blocks - and build the **Release** version.   (I couldn't get the debug version to work - something I'm missing there.)
-
----
-
-**The code should now work.**
-
-If it doesn't work - then you'll need to figure out which dependency hasn't been installed.
-
-Code::Blocks will show decent compile-time error messages; you can google these to figure out which libraries should be installed.
-
-I have assumed that you have the basic C++ toolset installed.
-
-So - when the project runs - then the rest of this README will make more sense to you.
-
 
 ---
 
