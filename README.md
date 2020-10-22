@@ -40,11 +40,13 @@ So now we can write code in the **behaviour** class that controls the bot's move
 
 There's an example **sample_test_behaviour.cpp** class already in the project. This makes the bot act as described in the **breakdown of current functionality** section (below).
 
+---
+
 **Note on more than one behaviour:**
 
 It's possible to have more than one **behaviour** class.
 
-You can see how to do this by looking for the **// load up the behaviours** comment in **main.cpp**. Add an extra row for each behaviour that you want to add to the program.
+You can see how to do this by looking for the **// load up the behaviours** comment in **main.cpp**. Then add an extra row for each behaviour that you created in the program.
 
 Your new Behaviour must extend the **behaviour_base** class the same way that the **sample_test_behaviour** class does.
 
